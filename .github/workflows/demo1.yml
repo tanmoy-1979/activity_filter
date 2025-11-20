@@ -3,6 +3,12 @@ on:
   pull_request:
     types:
       - opened
+  push:
+    branches:
+      - main
+      - dev
+    paths-ignore:
+      - '.github\workflows'
 jobs:
   deploy:
     runs-on: ubuntu-latest
